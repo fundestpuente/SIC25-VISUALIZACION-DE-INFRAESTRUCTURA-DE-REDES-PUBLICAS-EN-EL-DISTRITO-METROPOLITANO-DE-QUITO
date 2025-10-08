@@ -1,0 +1,21 @@
+# Procesamiento de datos y extraccion de datos de una API   
+pandas>=2.2.0
+numpy>=1.26.0
+requests>=2.31.0
+
+#Manejo de datos geoespaciales
+geopandas==1.1.1 
+
+# Visualización de datos (graficas estadísticas)
+matplotlib>=3.8.0
+seaborn>=0.13.0
+plotly>=6.3.0
+
+# Mapas (Representación geoespacial)
+folium>=0.15.0
+
+# Dashboard (Visualización interactiva, interfaz)
+dash>=2.15.0
+
+# Análisis (cálculos científicos, matemáticas, estadística y análisis numérico.)
+scipy>=1.12.0
