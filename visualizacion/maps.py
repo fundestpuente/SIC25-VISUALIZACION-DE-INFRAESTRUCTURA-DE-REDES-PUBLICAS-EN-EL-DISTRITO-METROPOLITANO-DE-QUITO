@@ -26,6 +26,25 @@ def generar_mapa():
             fillOpacity=0.7,
             weight=2
         ).add_to(cluster)
+    leyenda_html = '''
+    <div style="position: fixed; 
+                bottom: 50px; right: 50px; width: 200px; height: auto; 
+                background-color: white; z-index:9999; font-size:14px;
+                border:2px solid grey; border-radius: 5px; padding: 10px">
+        <h4 style="margin-top:0; margin-bottom:10px;">Nivel de Necesidad</h4>
+        <p style="margin: 5px 0;"><i style="background:red; width:20px; height:20px; 
+           float:left; margin-right:8px; border-radius:50%; border: 2px solid black;"></i> CRÍTICA</p>
+        <p style="margin: 5px 0;"><i style="background:orange; width:20px; height:20px; 
+           float:left; margin-right:8px; border-radius:50%; border: 2px solid black;"></i> ALTA</p>
+        <p style="margin: 5px 0;"><i style="background:yellow; width:20px; height:20px; 
+           float:left; margin-right:8px; border-radius:50%; border: 2px solid black;"></i> MEDIA</p>
+        <p style="margin: 5px 0;"><i style="background:lightgreen; width:20px; height:20px; 
+           float:left; margin-right:8px; border-radius:50%; border: 2px solid black;"></i> BAJA</p>
+        <p style="margin: 5px 0;"><i style="background:green; width:20px; height:20px; 
+           float:left; margin-right:8px; border-radius:50%; border: 2px solid black;"></i> ÓPTIMA</p>
+    </div>
+    '''
+    mapa.get_root().html.add_child(folium.Element(leyenda_html))
     
     mapa.save(RUTA_MAPA)
     print("Mapa generado exitosamente y guardado")
